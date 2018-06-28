@@ -8,10 +8,249 @@
   <meta name="description" content="MAAS table exploration">
   <meta name="author" content="Karl Williams, Canonical">
 
-  <link rel="stylesheet" href="">
+  <!-- Hosted Vanilla 1.7.1 -->
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
+
+  <!-- Current MAAS generated
+  <link rel="stylesheet" href="css/maas.css" />
+  -->
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <h1>MAAS table exploration</h1>
+    </div>
+  </section>
+  <section class="p-strip is-bordered">
+    <div class="row">
+        <table class="p-table p-table--machines" role="grid">
+            <thead>
+                <tr class="p-table__row">
+                  <th class="u-align--left">
+                      <!--<div class="u-float--left">
+                          <input class="checkbox" type="checkbox" id="check-all">
+                          <label class="checkbox-label u-no-margin--top" for="check-all"></label>
+                      </div>-->
+                      <span class="is-active is-sorted sort-asc">FQDN</span> |
+                      <span>MAC</span>
+                      <span class="compact-1">IP</span>
+                  </th>
+                  <th>Power</th>
+                  <th class="compact-0">IP</th>
+                  <th>Status</th>
+                  <th>Event</th>
+                  <th>Owner</th>
+                  <th>Cores</th>
+                  <th class="u-align--right sort-asc" title="RAM (GiB)">RAM<span class="detail-1"> (GiB)</span></th>
+                  <th class="u-align--right sort-asc" title="Disks">Disks</th>
+                  <th class="u-align--right sort-asc" title="Storage (GB)">Storage<span class="detail-1">  (GB)</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
 
+
+
+
+                <tr class="p-table__row">
+                    <td class="u-align--left" aria-label="FQDN">
+                        <div class="u-float--left">
+                            <input class="checkbox" type="checkbox" id="above-goat.ubnt">
+                            <label class="checkbox-label" for="above-goat.ubnt"></label>
+                        </div>
+                        <a href="#" title="above-goat.ubnt" class="p-domain">above-goat<span class="p-domain__suffix">.ubnt</span></a>
+                    </td>
+                    <td class="powerstate u-upper-case--first" aria-label="Power state">
+                    </td>
+                    <td class="u-align--center p-table--action-cell">
+                    </td>
+                    <td aria-label="Status" title="New">
+                        New
+                        <span class="u-hide--medium u-hide--large">
+                          <span class="p-tooltip p-tooltip--left">
+                          </span>
+                          <span class="p-tooltip p-tooltip--left">
+                                <i class="p-icon--warning" aria-describedby="failed-test-tooltip-large-above-goat.ubnt"></i>
+                                <span class="p-tooltip__message" role="tooltip" id="failed-test-tooltip-large-above-goat.ubnt">2 tests have passed.</span>
+                          </span>
+                        </span>
+                    </td>
+                    <td>caroline</td>
+                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
+                        <span class="p-tooltip p-tooltip--left">
+                          8
+                          <span class="p-tooltip__message" role="tooltip" id="node-cpu-tooltip-above-goat.ubnt">2 tests have passed. 1 test has timed out.</span>
+                        </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
+                        <span class="p-tooltip p-tooltip--left">
+                          16
+                          <span class="p-tooltip__message" role="tooltip" id="node-memory-tooltip-above-goat.ubnt">2 tests have passed. 1 test has failed.</span>
+                        </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
+                      4
+                      <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-above-goat.ubnt">3 tests have failed. 3 tests have timed out. 2 tests have failed installing dependencies. 3 tests have passed.</span>
+                    </td>
+                    <td class="u-align--right u-hide--small" aria-label="Storage">
+                        512
+                    </td>
+                </tr>
+                <tr class="p-table__row vs-repeat-repeated-element">
+                    <td class="u-align--left">
+                        <div class="u-float--left">
+                            <input class="checkbox" type="checkbox"id="fair-walrus.ubnt">
+                            <label class="checkbox-label" for="fair-walrus.ubnt"></label>
+                        </div>
+                        <a href="#" title="fair-walrus.ubnt" class="p-domain">fair-walrus<span class="p-domain__suffix">.ubnt</span></a>
+                    </td>
+
+                    <td class="powerstate u-upper-case--first" aria-label="Power state">
+                        <span class="p-icon--power-error u-margin--right-tiny"></span>
+                    </td>
+                    <td class="u-align--center p-table--action-cell">
+                      <i class="tooltip tooltip--left" aria-label="1 test has timed out. 1 test has passed."><span class="p-icon--power-error"></span></i>
+                        <span class="p-tooltip p-tooltip--top-right">
+
+                          <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-fair-walrus.ubnt">Machine has failed tests; use with caution!</span>
+                        </span>
+                    </td>
+                    <td aria-label="Status" title="Failed commissioning">
+                        Failed commissioning
+                        <span class="u-hide--medium u-hide--large">
+
+                          <span class="p-tooltip p-tooltip--left">
+                              <i aria-labelledby="1 test has timed out. 1 test has passed."><span class="p-icon--power-error"></span></i>
+                        <span class="p-tooltip__message" role="tooltip" id="other-status-tooltip-fair-walrus.ubnt">1 test has timed out. 1 test has passed.</span>
+                        </span>
+                        <span class="p-tooltip p-tooltip--left">
+
+                          </span>
+                        </span>
+                    </td>
+                    <td>bob</td>
+                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
+                      <span class="p-tooltip p-tooltip--left">
+                        8
+                      </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
+                      <span class="p-tooltip p-tooltip--left">
+                        <span aria-describedby="node-memory-tooltip-fair-walrus.ubnt"><span class="p-icon--power-error"></span></span>
+                          16
+                          <span class="p-tooltip__message" role="tooltip" id="node-memory-tooltip-fair-walrus.ubnt">2 tests have passed. 1 test has failed.</span>
+                      </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
+                        <span class="p-tooltip p-tooltip--left">
+                          <span data-maas-script-status="script-status" data-script-status="node.storage_test_status" aria-describedby="disk-count-tooltip-fair-walrus.ubnt"><span class="p-icon--power-error"></span></span>
+                        3
+                        <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-fair-walrus.ubnt">3 tests have passed. 4 tests have failed installing dependencies. 3 tests have failed. 2 tests have timed out.</span>
+                        </span>
+                    </td>
+                    <td class="u-align--right u-hide--small" aria-label="Storage">
+                      512
+                    </td>
+                </tr>
+                <tr class="p-table__row vs-repeat-repeated-element">
+                    <td class="u-align--left" aria-label="FQDN">
+                        <div class="u-float--left">
+                            <input class="checkbox" type="checkbox" id="fast-mule.maas">
+                            <label class="checkbox-label" for="fast-mule.maas"></label>
+                        </div>
+
+                        <a href="#" title="fast-mule.maas" class="p-domain p-domain--off">fast-mule<span class="p-domain__suffix">.maas</span></a>
+                    </td>
+
+                    <td class="powerstate u-upper-case--first" aria-label="Power state">
+                        <span class="p-icon--power-on u-margin--right-tiny"></span>
+                    </td>
+                    <td class="u-align--center p-table--action-cell">
+                        <i class="p-icon--spinner u-animation--spin u-hide--small"></i>
+                        <span class="p-tooltip p-tooltip--top-right">
+                          <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-fast-mule.maas">Machine has failed tests; use with caution!</span>
+                        </span>
+                    </td>
+                    <td aria-label="Status" title="Exiting rescue mode">
+                        Exiting rescue mode
+                    </td>
+                    <td>caroline</td>
+                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
+                        <span class="p-tooltip p-tooltip--left ng-binding">
+                          <span aria-describedby="node-cpu-tooltip-fast-mule.maas"><span class="p-icon--power-error"></span></span>
+                        8
+                        <span class="p-tooltip__message" role="tooltip" id="node-cpu-tooltip-fast-mule.maas">1 test has failed installing dependencies. 1 test has passed. 1 test has failed.</span>
+                        </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
+                      <span class="p-tooltip p-tooltip--left">
+                        32
+                      </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
+                        <span class="p-tooltip p-tooltip--left">
+                          <span aria-describedby="disk-count-tooltip-fast-mule.maas"><span class="p-icon--power-error"></span></span>
+                          3
+                          <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-fast-mule.maas">2 tests have timed out. 2 tests have failed installing dependencies. 5 tests have passed. 1 test has failed.</span>
+                    </span>
+                  </td>
+                  <td class="u-align--right u-hide--small" aria-label="Storage">
+                    512
+                  </td>
+                </tr>
+                <tr class="p-table__row vs-repeat-repeated-element">
+                    <td class="u-align--left" aria-label="FQDN">
+                        <div class="u-float--left">
+                          <input class="checkbox" type="checkbox" id="hot-vervet.ubnt">
+                          <label class="checkbox-label" for="hot-vervet.ubnt"></label>
+                        </div>
+                      <a href="#" title="hot-vervet.ubnt" class="p-domain--off">hot-vervet<span class="p-domain__suffix">.ubnt</span></a>
+                    </td>
+                    <td class="powerstate u-upper-case--first" aria-label="Power state">
+                      <span class="p-icon--power-off u-margin--right-tiny"></span>
+                    </td>
+                    <td class="u-align--center p-table--action-cell">
+                      <span class="p-tooltip p-tooltip--top-right">
+                        <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-hot-vervet.ubnt">Machine has failed tests; use with caution!</span>
+                      </span>
+                    </td>
+                    <td aria-label="Status" title="New">
+                        New
+                    </td>
+                    <td aria-label="Owner"></td>
+                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
+                      <span class="p-tooltip p-tooltip--left">
+                        4
+                      </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
+                      <span class="p-tooltip p-tooltip--left">
+                        8
+                      </span>
+                    </td>
+                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
+                      <span class="p-tooltip p-tooltip--left">
+                        4
+                      </span>
+                    </td>
+                    <td class="u-align--right u-hide--small" aria-label="Storage">
+                      1024
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
 </body>
 </html>
