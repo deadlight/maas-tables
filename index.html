@@ -19,214 +19,214 @@
 </head>
 
 <body>
-  <section class="p-strip is-bordered">
-    <div class="row">
-      <h1>MAAS table exploration</h1>
-    </div>
+  <section class="p-strip--dark is-shallow">
+    <h1>MAAS table exploration</h1>
   </section>
-  <table class="p-table p-table--machines" role="grid" style="margin-top: 6rem;">
-    <colgroup>
-      <col class="p-table__col--name">
-      <col class="p-table__col--power">
-      <col class="p-table__col--ip compact-0">
-      <col class="p-table__col--status">
-      <col class="p-table__col--events compact-0">
-      <col class="p-table__col--owner">
-      <col class="p-table__col--cores">
-      <col class="p-table__col--ram">
-      <col class="p-table__col--disks">
-      <col class="p-table__col--storage">
-    </colgroup>
-    <thead>
-      <tr class="p-table__row">
-        <th class="u-align--left" style="">
-          <!--<div class="u-float--left">
-          <input class="checkbox" type="checkbox" id="check-all">
-          <label class="checkbox-label u-no-margin--top" for="check-all"></label>
-          </div>-->
-          <span class="is-active is-sorted sort-asc">FQDN</span> |
-          <span>MAC</span>
-          <span class="compact-1"><br>IP</span>
-        </th>
-        <th><span class="detail-1">Power</span></th>
-        <th class="compact-0">IP</th>
-        <th>
-          Status
-          <span class="compact-1"><br>Events</span>
-        </th>
-        <th class="compact-0">Events</th>
-        <th>Owner</th>
-        <th class="u-align--right">Cores</th>
-        <th class="u-align--right" title="RAM (GiB)">RAM<span class="detail-1"> (GiB)</span></th>
-        <th class="u-align--right" title="Disks">Disks</th>
-        <th class="u-align--right" title="Storage (GB)">Storage<span class="detail-1">  (GB)</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">db-01<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.26</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
-        <td class="p-table__cell--status">
-          Allocated<br>
-          <span class="compact-1 muted"></span>
-        </td>
-        <td class="p-table__cell--events compact-0"></td>
-        <td class="p-table__cell--owner">caroline</td>
-        <td class="p-table__cell--cores u-align--right">16</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">1</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">db-02<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.26</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">Off</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
-        <td class="p-table__cell--status">
-          New<br>
-          <span class="compact-1 muted"></span>
-        </td>
-        <td class="p-table__cell--events compact-0"></td>
-        <td class="p-table__cell--owner"></td>
-        <td class="p-table__cell--cores u-align--right">16</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">1</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">eu-proxy-01<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.26</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
-        <td class="p-table__cell--status">
-          Deploying<br>
-          <span class="compact-1 muted">Configuring boot loader</span>
-        </td>
-        <td class="p-table__cell--events compact-0">Configuring boot loader</td>
-        <td class="p-table__cell--owner">alice</td>
-        <td class="p-table__cell--cores u-align--right">8</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">2</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">eu-proxy-02<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.26</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
-        <td class="p-table__cell--status">
-          Allocated<br>
-          <span class="compact-1 muted"></span>
-        </td>
-        <td class="p-table__cell--events compact-0"></td>
-        <td class="p-table__cell--owner">alice</td>
-        <td class="p-table__cell--cores u-align--right">8</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">2</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">dev-ci-01<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.38</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.38</td>
-        <td class="p-table__cell--status">
-          Allocated<br>
-          <span class="compact-1 muted"></span>
-        </td>
-        <td class="p-table__cell--events compact-0"></td>
-        <td class="p-table__cell--owner">bob</td>
-        <td class="p-table__cell--cores u-align--right">8</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">1</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">backup<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.100.54</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.100.54</td>
-        <td class="p-table__cell--status">
-          Deploying<br>
-          <span class="compact-1 muted">Rebooting into deployed OS</span>
-        </td>
-        <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
-        <td class="p-table__cell--owner">etsumi</td>
-        <td class="p-table__cell--cores u-align--right">4</td>
-        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">2</td>
-        <td class="p-table__cell--storage u-align--right">4096<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">dev-ci-02<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.26</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">Error</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
-        <td class="p-table__cell--status">
-          Failed testing<br>
-          <span class="compact-1 muted">Failed to power on</span>
-        </td>
-        <td class="p-table__cell--events compact-0">Failed to power on</td>
-        <td class="p-table__cell--owner">danvir</td>
-        <td class="p-table__cell--cores u-align--right">8</td>
-        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">1</td>
-        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
-      </tr>
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">caroline-test-box<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.08</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.08</td>
-        <td class="p-table__cell--status">
-          Deploying<br>
-          <span class="compact-1 muted">Partitioning disks</span>
-        </td>
-        <td class="p-table__cell--events compact-0">Partitioning disks</td>
-        <td class="p-table__cell--owner">caroline</td>
-        <td class="p-table__cell--cores u-align--right">4</td>
-        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">1</td>
-        <td class="p-table__cell--storage u-align--right">1024<span class="detail-0 muted">GB</span></td>
-      </tr>
+  <section style="margin: 10px;">
+    <table class="p-table p-table--machines" role="grid" style="margin-top: 6rem;">
+      <colgroup>
+        <col class="p-table__col--name">
+        <col class="p-table__col--power">
+        <col class="p-table__col--ip compact-0">
+        <col class="p-table__col--status">
+        <col class="p-table__col--events compact-0">
+        <col class="p-table__col--owner">
+        <col class="p-table__col--cores">
+        <col class="p-table__col--ram">
+        <col class="p-table__col--disks">
+        <col class="p-table__col--storage">
+      </colgroup>
+      <thead>
+        <tr class="p-table__row">
+          <th class="u-align--left" style="">
+            <!--<div class="u-float--left">
+            <input class="checkbox" type="checkbox" id="check-all">
+            <label class="checkbox-label u-no-margin--top" for="check-all"></label>
+            </div>-->
+            <span class="is-active is-sorted sort-asc">FQDN</span> |
+            <span>MAC</span>
+            <span class="compact-1"><br>IP</span>
+          </th>
+          <th><span class="detail-1">Power</span></th>
+          <th class="compact-0">IP</th>
+          <th>
+            Status
+            <span class="compact-1"><br>Events</span>
+          </th>
+          <th class="compact-0">Events</th>
+          <th>Owner</th>
+          <th class="u-align--right">Cores</th>
+          <th class="u-align--right" title="RAM (GiB)">RAM<span class="detail-1"> (GiB)</span></th>
+          <th class="u-align--right" title="Disks">Disks</th>
+          <th class="u-align--right" title="Storage (GB)">Storage<span class="detail-1">  (GB)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">db-01<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.26</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+          <td class="p-table__cell--status">
+            Allocated<br>
+            <span class="compact-1 muted"></span>
+          </td>
+          <td class="p-table__cell--events compact-0"></td>
+          <td class="p-table__cell--owner">caroline</td>
+          <td class="p-table__cell--cores u-align--right">16</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">1</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">db-02<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.26</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">Off</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+          <td class="p-table__cell--status">
+            New<br>
+            <span class="compact-1 muted"></span>
+          </td>
+          <td class="p-table__cell--events compact-0"></td>
+          <td class="p-table__cell--owner"></td>
+          <td class="p-table__cell--cores u-align--right">16</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">1</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">eu-proxy-01<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.26</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+          <td class="p-table__cell--status">
+            Deploying<br>
+            <span class="compact-1 muted">Configuring boot loader</span>
+          </td>
+          <td class="p-table__cell--events compact-0">Configuring boot loader</td>
+          <td class="p-table__cell--owner">alice</td>
+          <td class="p-table__cell--cores u-align--right">8</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">2</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">eu-proxy-02<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.26</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+          <td class="p-table__cell--status">
+            Allocated<br>
+            <span class="compact-1 muted"></span>
+          </td>
+          <td class="p-table__cell--events compact-0"></td>
+          <td class="p-table__cell--owner">alice</td>
+          <td class="p-table__cell--cores u-align--right">8</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">2</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">dev-ci-01<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.38</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.38</td>
+          <td class="p-table__cell--status">
+            Allocated<br>
+            <span class="compact-1 muted"></span>
+          </td>
+          <td class="p-table__cell--events compact-0"></td>
+          <td class="p-table__cell--owner">bob</td>
+          <td class="p-table__cell--cores u-align--right">8</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">1</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">backup<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.100.54</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.100.54</td>
+          <td class="p-table__cell--status">
+            Deploying<br>
+            <span class="compact-1 muted">Rebooting into deployed OS</span>
+          </td>
+          <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
+          <td class="p-table__cell--owner">etsumi</td>
+          <td class="p-table__cell--cores u-align--right">4</td>
+          <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">2</td>
+          <td class="p-table__cell--storage u-align--right">4096<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">dev-ci-02<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.26</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">Error</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+          <td class="p-table__cell--status">
+            Failed testing<br>
+            <span class="compact-1 muted">Failed to power on</span>
+          </td>
+          <td class="p-table__cell--events compact-0">Failed to power on</td>
+          <td class="p-table__cell--owner">danvir</td>
+          <td class="p-table__cell--cores u-align--right">8</td>
+          <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">1</td>
+          <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+        </tr>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">caroline-test-box<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.08</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.08</td>
+          <td class="p-table__cell--status">
+            Deploying<br>
+            <span class="compact-1 muted">Partitioning disks</span>
+          </td>
+          <td class="p-table__cell--events compact-0">Partitioning disks</td>
+          <td class="p-table__cell--owner">caroline</td>
+          <td class="p-table__cell--cores u-align--right">4</td>
+          <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">1</td>
+          <td class="p-table__cell--storage u-align--right">1024<span class="detail-0 muted">GB</span></td>
+        </tr>
 
-      <tr>
-        <td class="p-table__cell--name">
-          <a class="p-domain">legacy-web<span class="p-domain__suffix">.maas</span></a><br>
-          <span class="compact-1 muted">10.68.10.32</span>
-        </td>
-        <td class="p-table__cell--power"><span class="">On</span></td>
-        <td class="p-table__cell--ip compact-0">10.68.10.32</td>
-        <td class="p-table__cell--status">
-          Deploying<br>
-          <span class="compact-1 muted">Rebooting into deployed OS</span>
-        </td>
-        <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
-        <td class="p-table__cell--owner">caroline</td>
-        <td class="p-table__cell--cores u-align--right">4</td>
-        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
-        <td class="p-table__cell--disks u-align--right">2</td>
-        <td class="p-table__cell--storage u-align--right">256<span class="detail-0 muted">GB</span></td>
-      </tr>
-    </tbody>
-  </table>
+        <tr>
+          <td class="p-table__cell--name">
+            <a class="p-domain">legacy-web<span class="p-domain__suffix">.maas</span></a><br>
+            <span class="compact-1 muted">10.68.10.32</span>
+          </td>
+          <td class="p-table__cell--power"><span class="">On</span></td>
+          <td class="p-table__cell--ip compact-0">10.68.10.32</td>
+          <td class="p-table__cell--status">
+            Deploying<br>
+            <span class="compact-1 muted">Rebooting into deployed OS</span>
+          </td>
+          <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
+          <td class="p-table__cell--owner">caroline</td>
+          <td class="p-table__cell--cores u-align--right">4</td>
+          <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+          <td class="p-table__cell--disks u-align--right">2</td>
+          <td class="p-table__cell--storage u-align--right">256<span class="detail-0 muted">GB</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </body>
 </html>
