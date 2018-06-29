@@ -1,0 +1,134 @@
+/* Machines table custom styles */
+.p-table--machines td {
+  vertical-align: top;
+}
+
+/* Columns */
+.p-table__col--name {
+  width: 15%;
+}
+
+.p-table__col--power{
+  width: 5%;
+}
+
+.p-table__col--ip {
+  width: 12%;
+}
+
+.p-table__col--status {
+  width: 15%;
+}
+
+.p-table__col--events {
+  width: 15%;
+}
+
+.p-table__col--owner {
+  width: 9%;
+}
+
+.p-table__col--cores {
+  width: 7%;
+}
+
+.p-table__col--ram {
+  width: 7%;
+}
+
+.p-table__col--disks {
+  width: 7%;
+}
+
+.p-table__col--storage {
+  width: 7%;
+}
+
+/* Cells */
+.p-table__cell--name, .p-table__cell--status, .p-table__cell--events {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/*
+  Viewports for density and compactness
+  Classes used:
+    - .compact-0: no compactness added, elements are using the most room
+    - .compact-1: 1st level of compactness, stacking & grouping enabled
+    - .compact-2: 2nd lever of compactness, severe grouping & stacking, peotential removal of lower-priority elements
+    - .detail-0: just the basic information shown
+    - .detail-1: additional information shown
+*/
+
+
+/* LARGE */
+@media (min-width: 1401px) {
+  .compact-1 {
+    display: none;
+  }
+
+  .detail-0 {
+    display: none;
+  }
+}
+
+/* MEDIUM */
+@media (max-width: 1400px) and (min-width: 1201px) {
+  .compact-1 {
+    display: none;
+  }
+
+  .detail-1 {
+    display: none;
+  }
+}
+
+/* SMALL */
+@media (max-width: 1200px) {
+  .compact-0 {
+    display: none;
+  }
+
+  .detail-1 {
+    display: none;
+  }
+}
+
+
+/* TESTING */
+
+/* a test inplementation of a smaller size for nested information */
+.muted {
+  font-size: 0.875rem;
+}
+
+/* potential new pattern for displaying FQDNs */
+.p-domain {
+  font-weight: bold;
+}
+
+.p-domain--off {
+  font-weight: normal;
+  color: #cdcdcd;
+}
+
+.p-domain__suffix {
+  font-weight: normal;
+  color: #cdcdcd;
+}
+
+/* USEFUL FOR DEBUGGING COLUMN WIDTHS
+col {
+  background-color: #AEF642;
+}
+
+.p-table__col--name,
+.p-table__col--ip,
+.p-table__col--events,
+.p-table__col--cores,
+.p-table__col--disks {
+  background-color: #F4FBEA;
+}
+*/

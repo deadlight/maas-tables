@@ -24,233 +24,209 @@
       <h1>MAAS table exploration</h1>
     </div>
   </section>
-  <section class="p-strip is-bordered">
-    <div class="row">
-        <table class="p-table p-table--machines" role="grid">
-            <thead>
-                <tr class="p-table__row">
-                  <th class="u-align--left">
-                      <!--<div class="u-float--left">
-                          <input class="checkbox" type="checkbox" id="check-all">
-                          <label class="checkbox-label u-no-margin--top" for="check-all"></label>
-                      </div>-->
-                      <span class="is-active is-sorted sort-asc">FQDN</span> |
-                      <span>MAC</span>
-                      <span class="compact-1">IP</span>
-                  </th>
-                  <th>Power</th>
-                  <th class="compact-0">IP</th>
-                  <th>Status</th>
-                  <th>Event</th>
-                  <th>Owner</th>
-                  <th>Cores</th>
-                  <th class="u-align--right sort-asc" title="RAM (GiB)">RAM<span class="detail-1"> (GiB)</span></th>
-                  <th class="u-align--right sort-asc" title="Disks">Disks</th>
-                  <th class="u-align--right sort-asc" title="Storage (GB)">Storage<span class="detail-1">  (GB)</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+  <table class="p-table p-table--machines" role="grid" style="margin-top: 6rem;">
+    <colgroup>
+      <col class="p-table__col--name">
+      <col class="p-table__col--power">
+      <col class="p-table__col--ip compact-0">
+      <col class="p-table__col--status">
+      <col class="p-table__col--events compact-0">
+      <col class="p-table__col--owner">
+      <col class="p-table__col--cores">
+      <col class="p-table__col--ram">
+      <col class="p-table__col--disks">
+      <col class="p-table__col--storage">
+    </colgroup>
+    <thead>
+      <tr class="p-table__row">
+        <th class="u-align--left" style="">
+          <!--<div class="u-float--left">
+          <input class="checkbox" type="checkbox" id="check-all">
+          <label class="checkbox-label u-no-margin--top" for="check-all"></label>
+          </div>-->
+          <span class="is-active is-sorted sort-asc">FQDN</span> |
+          <span>MAC</span>
+          <span class="compact-1"><br>IP</span>
+        </th>
+        <th><span class="detail-1">Power</span></th>
+        <th class="compact-0">IP</th>
+        <th>
+          Status
+          <span class="compact-1"><br>Events</span>
+        </th>
+        <th class="compact-0">Events</th>
+        <th>Owner</th>
+        <th class="u-align--right">Cores</th>
+        <th class="u-align--right" title="RAM (GiB)">RAM<span class="detail-1"> (GiB)</span></th>
+        <th class="u-align--right" title="Disks">Disks</th>
+        <th class="u-align--right" title="Storage (GB)">Storage<span class="detail-1">  (GB)</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">db-01<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.26</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+        <td class="p-table__cell--status">
+          Allocated<br>
+          <span class="compact-1 muted"></span>
+        </td>
+        <td class="p-table__cell--events compact-0"></td>
+        <td class="p-table__cell--owner">caroline</td>
+        <td class="p-table__cell--cores u-align--right">16</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">1</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">db-02<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.26</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">Off</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+        <td class="p-table__cell--status">
+          New<br>
+          <span class="compact-1 muted"></span>
+        </td>
+        <td class="p-table__cell--events compact-0"></td>
+        <td class="p-table__cell--owner"></td>
+        <td class="p-table__cell--cores u-align--right">16</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">1</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">eu-proxy-01<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.26</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+        <td class="p-table__cell--status">
+          Deploying<br>
+          <span class="compact-1 muted">Configuring boot loader</span>
+        </td>
+        <td class="p-table__cell--events compact-0">Configuring boot loader</td>
+        <td class="p-table__cell--owner">alice</td>
+        <td class="p-table__cell--cores u-align--right">8</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">2</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">eu-proxy-02<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.26</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+        <td class="p-table__cell--status">
+          Allocated<br>
+          <span class="compact-1 muted"></span>
+        </td>
+        <td class="p-table__cell--events compact-0"></td>
+        <td class="p-table__cell--owner">alice</td>
+        <td class="p-table__cell--cores u-align--right">8</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">2</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">dev-ci-01<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.38</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.38</td>
+        <td class="p-table__cell--status">
+          Allocated<br>
+          <span class="compact-1 muted"></span>
+        </td>
+        <td class="p-table__cell--events compact-0"></td>
+        <td class="p-table__cell--owner">bob</td>
+        <td class="p-table__cell--cores u-align--right">8</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">1</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">backup<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.100.54</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.100.54</td>
+        <td class="p-table__cell--status">
+          Deploying<br>
+          <span class="compact-1 muted">Rebooting into deployed OS</span>
+        </td>
+        <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
+        <td class="p-table__cell--owner">etsumi</td>
+        <td class="p-table__cell--cores u-align--right">4</td>
+        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">2</td>
+        <td class="p-table__cell--storage u-align--right">4096<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">dev-ci-02<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.26</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">Error</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.26</td>
+        <td class="p-table__cell--status">
+          Failed testing<br>
+          <span class="compact-1 muted">Failed to power on</span>
+        </td>
+        <td class="p-table__cell--events compact-0">Failed to power on</td>
+        <td class="p-table__cell--owner">danvir</td>
+        <td class="p-table__cell--cores u-align--right">8</td>
+        <td class="p-table__cell--ram u-align--right">16<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">1</td>
+        <td class="p-table__cell--storage u-align--right">512<span class="detail-0 muted">GB</span></td>
+      </tr>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">caroline-test-box<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.08</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.08</td>
+        <td class="p-table__cell--status">
+          Deploying<br>
+          <span class="compact-1 muted">Partitioning disks</span>
+        </td>
+        <td class="p-table__cell--events compact-0">Partitioning disks</td>
+        <td class="p-table__cell--owner">caroline</td>
+        <td class="p-table__cell--cores u-align--right">4</td>
+        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">1</td>
+        <td class="p-table__cell--storage u-align--right">1024<span class="detail-0 muted">GB</span></td>
+      </tr>
 
-
-
-
-                <tr class="p-table__row">
-                    <td class="u-align--left" aria-label="FQDN">
-                        <div class="u-float--left">
-                            <input class="checkbox" type="checkbox" id="above-goat.ubnt">
-                            <label class="checkbox-label" for="above-goat.ubnt"></label>
-                        </div>
-                        <a href="#" title="above-goat.ubnt" class="p-domain">above-goat<span class="p-domain__suffix">.ubnt</span></a>
-                    </td>
-                    <td class="powerstate u-upper-case--first" aria-label="Power state">
-                    </td>
-                    <td class="u-align--center p-table--action-cell">
-                    </td>
-                    <td aria-label="Status" title="New">
-                        New
-                        <span class="u-hide--medium u-hide--large">
-                          <span class="p-tooltip p-tooltip--left">
-                          </span>
-                          <span class="p-tooltip p-tooltip--left">
-                                <i class="p-icon--warning" aria-describedby="failed-test-tooltip-large-above-goat.ubnt"></i>
-                                <span class="p-tooltip__message" role="tooltip" id="failed-test-tooltip-large-above-goat.ubnt">2 tests have passed.</span>
-                          </span>
-                        </span>
-                    </td>
-                    <td>caroline</td>
-                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
-                        <span class="p-tooltip p-tooltip--left">
-                          8
-                          <span class="p-tooltip__message" role="tooltip" id="node-cpu-tooltip-above-goat.ubnt">2 tests have passed. 1 test has timed out.</span>
-                        </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
-                        <span class="p-tooltip p-tooltip--left">
-                          16
-                          <span class="p-tooltip__message" role="tooltip" id="node-memory-tooltip-above-goat.ubnt">2 tests have passed. 1 test has failed.</span>
-                        </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
-                      4
-                      <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-above-goat.ubnt">3 tests have failed. 3 tests have timed out. 2 tests have failed installing dependencies. 3 tests have passed.</span>
-                    </td>
-                    <td class="u-align--right u-hide--small" aria-label="Storage">
-                        512
-                    </td>
-                </tr>
-                <tr class="p-table__row vs-repeat-repeated-element">
-                    <td class="u-align--left">
-                        <div class="u-float--left">
-                            <input class="checkbox" type="checkbox"id="fair-walrus.ubnt">
-                            <label class="checkbox-label" for="fair-walrus.ubnt"></label>
-                        </div>
-                        <a href="#" title="fair-walrus.ubnt" class="p-domain">fair-walrus<span class="p-domain__suffix">.ubnt</span></a>
-                    </td>
-
-                    <td class="powerstate u-upper-case--first" aria-label="Power state">
-                        <span class="p-icon--power-error u-margin--right-tiny"></span>
-                    </td>
-                    <td class="u-align--center p-table--action-cell">
-                      <i class="tooltip tooltip--left" aria-label="1 test has timed out. 1 test has passed."><span class="p-icon--power-error"></span></i>
-                        <span class="p-tooltip p-tooltip--top-right">
-
-                          <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-fair-walrus.ubnt">Machine has failed tests; use with caution!</span>
-                        </span>
-                    </td>
-                    <td aria-label="Status" title="Failed commissioning">
-                        Failed commissioning
-                        <span class="u-hide--medium u-hide--large">
-
-                          <span class="p-tooltip p-tooltip--left">
-                              <i aria-labelledby="1 test has timed out. 1 test has passed."><span class="p-icon--power-error"></span></i>
-                        <span class="p-tooltip__message" role="tooltip" id="other-status-tooltip-fair-walrus.ubnt">1 test has timed out. 1 test has passed.</span>
-                        </span>
-                        <span class="p-tooltip p-tooltip--left">
-
-                          </span>
-                        </span>
-                    </td>
-                    <td>bob</td>
-                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
-                      <span class="p-tooltip p-tooltip--left">
-                        8
-                      </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
-                      <span class="p-tooltip p-tooltip--left">
-                        <span aria-describedby="node-memory-tooltip-fair-walrus.ubnt"><span class="p-icon--power-error"></span></span>
-                          16
-                          <span class="p-tooltip__message" role="tooltip" id="node-memory-tooltip-fair-walrus.ubnt">2 tests have passed. 1 test has failed.</span>
-                      </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
-                        <span class="p-tooltip p-tooltip--left">
-                          <span data-maas-script-status="script-status" data-script-status="node.storage_test_status" aria-describedby="disk-count-tooltip-fair-walrus.ubnt"><span class="p-icon--power-error"></span></span>
-                        3
-                        <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-fair-walrus.ubnt">3 tests have passed. 4 tests have failed installing dependencies. 3 tests have failed. 2 tests have timed out.</span>
-                        </span>
-                    </td>
-                    <td class="u-align--right u-hide--small" aria-label="Storage">
-                      512
-                    </td>
-                </tr>
-                <tr class="p-table__row vs-repeat-repeated-element">
-                    <td class="u-align--left" aria-label="FQDN">
-                        <div class="u-float--left">
-                            <input class="checkbox" type="checkbox" id="fast-mule.maas">
-                            <label class="checkbox-label" for="fast-mule.maas"></label>
-                        </div>
-
-                        <a href="#" title="fast-mule.maas" class="p-domain p-domain--off">fast-mule<span class="p-domain__suffix">.maas</span></a>
-                    </td>
-
-                    <td class="powerstate u-upper-case--first" aria-label="Power state">
-                        <span class="p-icon--power-on u-margin--right-tiny"></span>
-                    </td>
-                    <td class="u-align--center p-table--action-cell">
-                        <i class="p-icon--spinner u-animation--spin u-hide--small"></i>
-                        <span class="p-tooltip p-tooltip--top-right">
-                          <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-fast-mule.maas">Machine has failed tests; use with caution!</span>
-                        </span>
-                    </td>
-                    <td aria-label="Status" title="Exiting rescue mode">
-                        Exiting rescue mode
-                    </td>
-                    <td>caroline</td>
-                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
-                        <span class="p-tooltip p-tooltip--left ng-binding">
-                          <span aria-describedby="node-cpu-tooltip-fast-mule.maas"><span class="p-icon--power-error"></span></span>
-                        8
-                        <span class="p-tooltip__message" role="tooltip" id="node-cpu-tooltip-fast-mule.maas">1 test has failed installing dependencies. 1 test has passed. 1 test has failed.</span>
-                        </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
-                      <span class="p-tooltip p-tooltip--left">
-                        32
-                      </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
-                        <span class="p-tooltip p-tooltip--left">
-                          <span aria-describedby="disk-count-tooltip-fast-mule.maas"><span class="p-icon--power-error"></span></span>
-                          3
-                          <span class="p-tooltip__message" role="tooltip" id="disk-count-tooltip-fast-mule.maas">2 tests have timed out. 2 tests have failed installing dependencies. 5 tests have passed. 1 test has failed.</span>
-                    </span>
-                  </td>
-                  <td class="u-align--right u-hide--small" aria-label="Storage">
-                    512
-                  </td>
-                </tr>
-                <tr class="p-table__row vs-repeat-repeated-element">
-                    <td class="u-align--left" aria-label="FQDN">
-                        <div class="u-float--left">
-                          <input class="checkbox" type="checkbox" id="hot-vervet.ubnt">
-                          <label class="checkbox-label" for="hot-vervet.ubnt"></label>
-                        </div>
-                      <a href="#" title="hot-vervet.ubnt" class="p-domain--off">hot-vervet<span class="p-domain__suffix">.ubnt</span></a>
-                    </td>
-                    <td class="powerstate u-upper-case--first" aria-label="Power state">
-                      <span class="p-icon--power-off u-margin--right-tiny"></span>
-                    </td>
-                    <td class="u-align--center p-table--action-cell">
-                      <span class="p-tooltip p-tooltip--top-right">
-                        <span class="p-tooltip__message" role="tooltip" id="failed-test-warning-tooltip-hot-vervet.ubnt">Machine has failed tests; use with caution!</span>
-                      </span>
-                    </td>
-                    <td aria-label="Status" title="New">
-                        New
-                    </td>
-                    <td aria-label="Owner"></td>
-                    <td class="u-align--right p-table--action-cell" aria-label="CPU">
-                      <span class="p-tooltip p-tooltip--left">
-                        4
-                      </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Memory">
-                      <span class="p-tooltip p-tooltip--left">
-                        8
-                      </span>
-                    </td>
-                    <td class="u-align--right p-table--action-cell" aria-label="Disks">
-                      <span class="p-tooltip p-tooltip--left">
-                        4
-                      </span>
-                    </td>
-                    <td class="u-align--right u-hide--small" aria-label="Storage">
-                      1024
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  </section>
+      <tr>
+        <td class="p-table__cell--name">
+          <a class="p-domain">legacy-web<span class="p-domain__suffix">.maas</span></a><br>
+          <span class="compact-1 muted">10.68.10.32</span>
+        </td>
+        <td class="p-table__cell--power"><span class="">On</span></td>
+        <td class="p-table__cell--ip compact-0">10.68.10.32</td>
+        <td class="p-table__cell--status">
+          Deploying<br>
+          <span class="compact-1 muted">Rebooting into deployed OS</span>
+        </td>
+        <td class="p-table__cell--events compact-0">Rebooting into deployed OS</td>
+        <td class="p-table__cell--owner">caroline</td>
+        <td class="p-table__cell--cores u-align--right">4</td>
+        <td class="p-table__cell--ram u-align--right">8<span class="detail-0 muted">GiB</span></td>
+        <td class="p-table__cell--disks u-align--right">2</td>
+        <td class="p-table__cell--storage u-align--right">256<span class="detail-0 muted">GB</span></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
